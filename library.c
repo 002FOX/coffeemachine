@@ -11,7 +11,7 @@
 #define ESPRESSOWATER 1
 #define COCOMIXNEEDED 1
 #define TEANEEDED 1
-#define COFFEENEDED 1
+#define COFFEENEEDED 1
 
 int water, coffee_beans, tea, coco_mix, choice, success, total_entry= 0, price, sugar, sugar_lvl, sl_choice, coins1, coins2, coins5,
 coins10;
@@ -47,7 +47,7 @@ int get_order() {
 
     if(water >= HOTCOCOAWATER && coco_mix >= COCOMIXNEEDED)
     printf(" 1. Hot cocoa\n Price: %d Dh\n", HOTCOCOA_PRICE);
-    if(water >= ESPRESSOWATER && coffee_beans >= COFFEENEDED)
+    if(water >= ESPRESSOWATER && coffee_beans >= COFFEENEEDED)
     printf(" 2. Espresso\n Price: %d Dh\n", ESPRESSO_PRICE);
     if(water >= TEAWATER && tea >= TEANEEDED)
     printf(" 3. Tea\n Price: %d Dh\n", TEA_PRICE);
@@ -143,7 +143,7 @@ int check_order(int choice){
      success = 0;
     break;
     case 2:
-     if(water >= ESPRESSOWATER && coffee_beans >= COFFEENEDED){
+     if(water >= ESPRESSOWATER && coffee_beans >= COFFEENEEDED){
        success = 1;
      }
      else
@@ -256,7 +256,7 @@ int deliver_order(int choice) {
       break;
       case 2:
         printf("Here is your ordered Espresso.\n");
-        coffee_beans -= COFFEENEDED;
+        coffee_beans -= COFFEENEEDED;
         water -= ESPRESSOWATER;
       break;
       case 3:
